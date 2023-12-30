@@ -1,2 +1,2 @@
 # ED
-Exact diagonalization
+Exact diagonalization using Matlab
