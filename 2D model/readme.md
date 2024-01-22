@@ -82,8 +82,8 @@ end
         H = kron(H, id) + h + h' + kron(kron(Sz{site+1},eye(2^site,2^site)),sz);
 
         if site>0
-            % h = 0.5*kron(Sp1, sp');
-            H = H + kron(Sz1,sz);
+            h = 0.5*kron(Sp1, sp');
+            H = H + h + h' + kron(Sz1,sz);
 
 
             if site == L-1
