@@ -208,7 +208,7 @@ for site=1:L-1 %L-1
         if site < L-1
             Sz1 = kron(Id, sz); %此时的Sz1是site的
             Sz0 = kron(Sz0, id);%此时的Sz0是site的
-            Id = eye(size(Sp0)); 
+            Id = eye(size(Sz0)); 
         end
     end
 end
@@ -229,5 +229,5 @@ H = H + sgamma;
 
 [V,D] = eig(H);
 % det(H)
-% D = diag(D)
+D = diag(D)/L;
 GS = V(:,1); % gound state
