@@ -213,7 +213,9 @@ Sz0 = kron(Sz0, id);
 Id = eye(size(Sz0)); 
 ```
 
-$$\text{Sz1: }I_{16\times 16}\color{orange} \otimes S^z_{2\times 2},\ \ \\ \text{Sz0: }I_{8\times 8} \otimes S^z_{2\times 2} \color{orange} \otimes I_{2\times 2}$$
+$$\text{Sz1: }I_{16\times 16}\color{orange} \otimes S^z_{2\times 2}$$  
+
+$$\text{Sz0: }I_{8\times 8} \otimes S^z_{2\times 2} \color{orange} \otimes I_{2\times 2}$$
 
 2. For `site=2=L-1`
 
@@ -356,8 +358,11 @@ $$III = I_{2^0,2^0} = I_{1\times 1}.$$
 kron(kron(Sz{site+1},eye(2^(site),2^(site)),sz)
 ```
 
-$$\text{Sz(1)} \otimes I_{1\times 1}$$ 
-$$\to S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \color{orange}\otimes I_{1\times1}\\ \to S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \color{orange}\otimes I_{1\times1}\color{red}\otimes S^z_{2\times 2} \to 16\times 16 \text{ matrix}$$
+$$\text{Sz(1)} \otimes I_{1\times 1}$$  
+
+$$\to S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \color{orange}\otimes I_{1\times1}$$  
+
+$$\to S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \color{orange}\otimes I_{1\times1}\color{red}\otimes S^z_{2\times 2} \to 16\times 16 \text{ matrix}$$
 
 2. For `site=1`
 
@@ -365,7 +370,8 @@ $$\to S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \color{orange}\
 H = kron(H,id) +...+ kron(kron(Sz{site+1},eye(2^site,2^site)),sz)
 ```
 
-$$S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times2}$$
+$$S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times2}$$  
+
 $$+I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\color{orange}\otimes I_{2\times 2}\otimes S^z_{2\times 2}$$
 
 gives 32x32 matrix.
@@ -376,8 +382,10 @@ gives 32x32 matrix.
 H = kron(H,id) +...+ kron(kron(Sz{site+1},eye(2^site,2^site)),sz)
 ```
 
-$$S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes S^z_{2\times 2}\otimes I_{2\times2}\color{orange}\otimes I_{2\times 2}$$
-$$+I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}$$
+$$S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes S^z_{2\times 2}\otimes I_{2\times2}\color{orange}\otimes I_{2\times 2}$$  
+
+$$+I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}$$  
+
 $$+I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}$$
 
 
@@ -391,7 +399,8 @@ $$III = I_{2^3\times 2^3} = I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\time
 kron(kron(Sz{site+1},eye(2^(site),2^(site)),sz)
 ```
 
-$$I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{orange} I_{1\times1}$$
+$$I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{orange} I_{1\times1}$$  
+
 $$\to I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2} \to 2^7\times 2^7 \text{ matrix}$$
 
 
@@ -402,7 +411,8 @@ $$\to I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\tim
 H = kron(H,id) +...+ kron(kron(Sz{site+1},eye(2^site,2^site)),sz)
 ```
 
-$$I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2}\color{orange}\otimes I_{2\times2}$$
+$$I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2}\color{orange}\otimes I_{2\times2}$$  
+
 $$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes S^z_{2\times 2}$$
 
 gives $2^8 \times 2^8$ matrix.
@@ -413,20 +423,26 @@ gives $2^8 \times 2^8$ matrix.
 H = kron(H,id) +...+ kron(kron(Sz{site+1},eye(2^site,2^site)),sz)
 ```
 
-$$I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2}\color{orange}\otimes I_{2\times2}\otimes I_{2\times 2}$$
-$$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}$$
+$$I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2}\color{orange}\otimes I_{2\times2}\otimes I_{2\times 2}$$  
+
+$$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}$$    
+
 $$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}$$
 
 Gives $2^9 \times 2^9$ matrix.
 
 Therefore, we summarize the overall Longitudinal Hamiltonian when `row = 1, 2`:
 
+$$=S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes S^z_{2\times 2}\otimes I_{2\times2}\color{orange}\otimes I_{2\times 2}\color{green}\otimes I_{8\times 8}$$  
 
-$$=S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes S^z_{2\times 2}\otimes I_{2\times2}\color{orange}\otimes I_{2\times 2}\color{green}\otimes I_{8\times 8}$$
-$$+I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}\color{green}\otimes I_{8\times 8}$$
-$$+I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\color{green}\otimes I_{8\times 8}$$
-$$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2}\color{orange}\otimes I_{2\times2}\color{orange}\otimes I_{2\times 2}$$
-$$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}$$
+$$+I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}\color{green}\otimes I_{8\times 8}$$  
+
+$$+I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{orange}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\color{green}\otimes I_{8\times 8}$$  
+
+$$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes \color{red} S^z_{2\times 2}\color{orange}\otimes I_{2\times2}\color{orange}\otimes I_{2\times 2}$$  
+
+$$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}$$  
+
 $$+I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\otimes \color{orange}I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}$$
 
 
@@ -451,9 +467,12 @@ end
 $$III : (row-2)*L = 3 \to I_{2^3 \times 2^3}$$
 
 $$\text{kron(ssz(i)},\color{red}\text{Sz(i})\color{black})$$  
-$$S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}  \color{red} \otimes I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}$$
-$$+ I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\color{red }\otimes I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}$$
-$$+ I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{red } \otimes I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}$$
+
+$$S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}  \color{red} \otimes I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}$$  
+
+$$+I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}\color{red }\otimes I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2}\otimes I_{2\times 2}\otimes S^z_{2\times 2}\otimes I_{2\times 2}$$  
+
+$$+I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}\color{red } \otimes I_{2\times 2} \otimes I_{2\times 2}\otimes I_{2\times 2} \otimes I_{2\times 2} \otimes I_{2\times 2} \otimes S^z_{2\times 2}$$
 
 Therefore, `row=L` completes the construction of the Longitudinal Hamiltonian.
 
