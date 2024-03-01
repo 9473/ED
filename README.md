@@ -27,12 +27,12 @@ $$
 2. $\Delta = 1.0$ in XXZ model gives the standard Heisenberg Model: $H = J\sum_{<i,j>}\mathbf{S}_i\cdot \mathbf{S}_j$ $\to$ .  
 
 $$
-H = J\sum_{\langle i,j \rangle } (S^x_iS^x_j+S^y_iS^y_j+S^z_iS^z_j)
+H_{Heisenberg} = J\sum_{\langle i,j \rangle } (S^x_iS^x_j+S^y_iS^y_j+S^z_iS^z_j),J = 1
 $$
 
 3. Our more common form is to use $S^+, S^-$,
 
 $$
-H=\sum_{\langle i,j\rangle} \left[ \frac{1}{2}(S^+_i S^-_j + S^-_i S^+_j) + S^z_i S^z_j \right] - \sum_i h^z S^z_i
+H_{XXZ}=\sum_{\langle i,j\rangle} \left[ \frac{1}{2}(S^+_i S^-_j + S^-_i S^+_j) + S^z_i S^z_j \right]
 $$
 
